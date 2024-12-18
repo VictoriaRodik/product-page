@@ -1,0 +1,45 @@
+:root {
+    --background-color: #F9F0E5;
+    --primary-color: #01005B;
+}
+
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bg-custom {
+    background-color: var(--background-color);
+}
+
+.small-text {
+    font-size: 11px;
+}
+.title {
+    color: var(--primary-color);
+    letter-spacing: 0.1rem;
+}
+
+
+.desktop-el {
+    display: none;
+}
+
+.logo-img {
+    width: 200px;
+    height: 100%;
+}
+.smallIconPinkBg{
+    width: 31px;
+    height: 100%;
+}
+
+.text-paragraph {
+    font-size: 13px;
+}
+
+.button {
+    background-color: var(--primary-color);
+    font-size: 18px;
+    width: 362px;
+}
