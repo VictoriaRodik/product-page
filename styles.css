@@ -15,6 +15,7 @@
 .small-text {
     font-size: 11px;
 }
+
 .title {
     color: var(--primary-color);
     letter-spacing: 0.1rem;
@@ -29,7 +30,8 @@
     width: 200px;
     height: 100%;
 }
-.smallIconPinkBg{
+
+.smallIconPinkBg {
     width: 31px;
     height: 100%;
 }
@@ -43,3 +45,40 @@
     font-size: 18px;
     width: 362px;
 }
+
+.stars {
+    width: 60px;
+    height: 9.68px;
+}
+
+.swiper-pagination-bullet {
+    background-color: grey !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: black !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '' !important;
+}
+
+.swiper-button-prev {
+    background-image: url('assets/ArrowLeft.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swiper-button-next {
+    background-image: url('assets/ArrowRight.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.thumbnail.active {
+    border: 2px solid white;
+}
+
+  
