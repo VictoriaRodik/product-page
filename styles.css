@@ -1,6 +1,10 @@
 :root {
     --background-color: #F9F0E5;
     --primary-color: #01005B;
+    --background-color-add: #F0EEEF;
+    --title-color: #2A2996;
+
+
 }
 
 
@@ -10,6 +14,10 @@
 
 .bg-custom {
     background-color: var(--background-color);
+}
+
+.bg-photo {
+    background-color: var(--primary-color);
 }
 
 .small-text {
@@ -51,6 +59,11 @@
     height: 9.68px;
 }
 
+.stars-big {
+    width: 80.56px;
+    height: 13px;
+}
+
 .swiper-pagination-bullet {
     background-color: grey !important;
 }
@@ -81,4 +94,40 @@
     border: 2px solid white;
 }
 
-  
+.blog-section {
+    background-color: var(--background-color-add);
+}
+
+.blog-text {
+    font-size: 15px;
+}
+
+.card {
+    background-color: var(--background-color-add);
+    height: 300px;
+}
+
+.middle-card {
+    background-color: var(--background-color);
+    height: 300px;
+}
+
+.impact-section {
+    background-color: var(--background-color-add);
+    color: var(--title-color)
+}
+
+.footer-mobile {
+    background: linear-gradient(360deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
+
+}
+
+.characteristics {
+    background: linear-gradient(360deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
+
+}
+
+.color-section {
+    background: linear-gradient(180deg, #F9F0E5 -7.8%, rgba(249, 240, 229, 0.18) 38.6%, rgba(249, 240, 229, 0) 100%);
+
+}

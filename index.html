@@ -8,32 +8,31 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script defer src="swiper-init.js"></script>
+  <script src="toggleAccordion.js"></script>
 </head>
 
 <body>
   <div class="">
     <section class="text-center flex justify-center items-center py-2 bg-custom space-x-4">
-      <p id="headlineText" class="small-text text-gray-600 font-thin desktop-el">
+      <div class="small-text text-gray-600 font-thin hidden sm:block sm:border-r sm:border-gray-500 sm:pr-4">
         CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)
-      </p>
-      <div class="border border-gray-500 desktop-el"></div>
-      <p id="headlineTextFreeShipping" class="small-text  text-gray-600 font-thin">
+      </div>
+      <div class="small-text text-gray-600 font-thin">
         FREE SHIPPING on orders > $200
-      </p>
-      <div class="border border-gray-500 desktop-el"></div>
-      <p id="headlineTextReturn" class="small-text text-gray-600 font-thin desktop-el">
+      </div>
+      <div class="small-text text-gray-600 font-thin hidden sm:block sm:border-l sm:border-gray-500 sm:pl-4">
         Easy 45-day return window.
-      </p>
+      </div>
     </section>
 
-    <header class="text-center py-8 bg-white px-6">
-      <div id="logo" class="mb-6 mt-0">
+    <header class="text-center py-8 px-6">
+      <div class="mb-6 mt-0">
         <img src="assets/LOGO.png" alt="Brand Logo" class="mx-auto logo-img">
       </div>
-      <h1 id="title" class="text-2xl title">
+      <h1 class="text-2xl title">
         Don’t apologize for being comfortable.
       </h1>
-      <div id="mainBanner" class="p-6">
+      <div class="p-6">
         <img src="assets/mainBanner.png" alt="Main banner showing cozy loungewear" class="w-full max-w-4xl mx-auto">
       </div>
     </header>
@@ -56,18 +55,18 @@
       </ul>
     </section>
 
-    <div class="bg-white text-center">
+    <div class="text-center">
       <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
         Customize Your Outfit
         <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
       </button>
     </div>
 
-    <section class="p-4 m-6 text-left border border-gray-300 rounded-lg shadow-xl">
+    <section class="p-4 m-6 text-left border border-gray-200 rounded-lg shadow-xl bg-white relative z-10">
       <div class="max-w-md mx-auto">
         <div class="mb-4 flex">
-          <div class="mb-4">
-            <img src="assets/userPhoto.png" alt="User Photo" class="mx-auto h-12 w-12 ">
+          <div class="mb-4 h-12 w-12 rounded-full bg-photo">
+            <img src="assets/userPhoto.png" alt="User Photo" class="mx-auto ">
           </div>
           <div class="mb-4 flex flex-col ml-5 ">
             <div class="flex">
@@ -87,18 +86,18 @@
     </section>
 
 
-    <section class="p-6 bg-white text-center">
+    <section class="p-6 pt-36 -mt-24 text-center color-section relative z-0">
 
-      <p class="text-sm font-medium text-gray-500 tracking-wide">as seen in</p>
+      <p class="text-md text-gray-400 ">as seen in</p>
 
-      <div class="swiper swiper-logos mt-6 max-w-md mx-auto">
+      <div class="swiper swiper-logos my-6 max-w-md mx-auto">
         <div class="swiper-wrapper">
-          <div class="swiper-slide flex justify-items-center gap-4">
+          <div class="swiper-slide flex justify-items-center my-4">
             <img src="assets/Artboard3 1.png" alt="Brand Logo 1" class="object-contain w-32 px-2">
             <img src="assets/Artboard6 1.png" alt="Brand Logo 2" class="object-contain w-16 px-2">
             <img src="assets/Artboard4 1.png" alt="Brand Logo 3" class="object-contain w-40 px-2">
           </div>
-          <div class="swiper-slide flex justify-center">
+          <div class="swiper-slide flex justify-center my-4">
             <img src="assets/Artboard2 1.png" alt="Brand Logo 1" class="object-contain w-48 px-2">
             <img src="assets/Artboard5 1.png" alt="Brand Logo 2" class="object-contain w-48 px-2">
           </div>
@@ -106,14 +105,10 @@
 
         <div class="swiper-pagination mt-12"></div>
       </div>
-    </section>
 
-
-    <section class="p-6 text-center">
       <h2 class="mx-4 title text-2xl">
         Loungewear you can be proud of.
       </h2>
-
 
       <div class="swiper swiper-products relative mt-6 max-w-md mx-auto">
         <div class="swiper-wrapper">
@@ -143,202 +138,443 @@
           </div>
         </div>
 
-        <div
-          class="swiper-thumbnails absolute left-0 right-0 bottom-24 z-10 flex justify-center gap-2">
+        <div class="swiper-thumbnails absolute left-0 right-0 bottom-24 z-10 flex justify-center gap-2">
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next "></div>
       </div>
     </section>
 
-    <div>
-      <ul>
-        <li><img src="assets/cloudIcon.png" alt="">
-          <h3>Ethically sourced.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
-            pellentesque. In eget ipsum et felis finibus consequat. </p>
+    <section class="characteristics py-8">
+      <ul class="p-6 text-center space-y-8">
+        <li class="px-12 flex flex-col items-center space-y-4 border-b border-gray-300 pb-8">
+          <img src="assets/cloudIcon.png" alt="Cloud Icon" class="w-10">
+          <h3 class="text-lg title ">Ethically sourced.</h3>
+          <p class="text-sm text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
+            pellentesque. In eget ipsum et felis finibus consequat.
+          </p>
         </li>
-        <li><img src="assets/dayNightIconBig.png" alt="">
-          <h3>Responsibly made.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
-            pellentesque. In eget ipsum et felis finibus consequat. </p>
+        <li class="px-12 flex flex-col items-center space-y-4 border-b border-gray-300 pb-8">
+          <img src="assets/dayNightIconBig.png" alt="" class="w-10">
+          <h3 class="text-lg title">Responsibly made.</h3>
+          <p class="text-sm text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
+            pellentesque. In eget ipsum et felis finibus consequat.
+          </p>
         </li>
-        <li><img src="assets/leafIcon.png" alt="">
-          <h3>Made for living in.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
-            pellentesque. In eget ipsum et felis finibus consequat. </p>
+        <li class="px-12 flex flex-col items-center space-y-4 border-b border-gray-300 pb-8">
+          <img src="assets/leafIcon.png" alt="" class="w-10">
+          <h3 class="text-lg title">Made for living in.</h3>
+          <p class="text-sm text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
+            pellentesque. In eget ipsum et felis finibus consequat.
+          </p>
         </li>
-        <li><img src="assets/fogIconBig.png" alt="">
-          <h3>Unimaginably comfortable.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
-            pellentesque. In eget ipsum et felis finibus consequat. </p>
+        <li class="px-12 flex flex-col items-center space-y-4">
+          <img src="assets/fogIconBig.png" alt="" class="w-10">
+          <h3 class="text-lg title">Unimaginably comfortable.</h3>
+          <p class="text-sm text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
+            pellentesque. In eget ipsum et felis finibus consequat.
+          </p>
         </li>
       </ul>
-      <div class="py-6 bg-white text-center">
-        <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
-          Customize Your Outfit
-          <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
-        </button>
-      </div>
-      <div><img src="assets/stars.png" alt="Stars">
-        <p>One of 500+ 5 Star Reviews Online</p>
+
+      <section class="px-6 my-6">
+        <div class="text-center">
+          <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
+            Customize Your Outfit
+            <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
+          </button>
+        </div>
+        <div class="flex text-left mt-3 px-4 mx-auto">
+          <img src="assets/stars.png" alt="5-star review rating" class="stars-big ml-4 ">
+          <p class="text-xs text-gray-500 ml-4">
+            One of 500+ 5 Star Reviews Online
+          </p>
+        </div>
+      </section>
+    </section>
+
+
+    <div class="px-16 py-8 blog-section text-center">
+      <h3 class="mx-4 title text-2xl">
+        Be your best self.
+      </h3>
+      <div class="my-6"><img src="assets/banner1.png" alt="Products"></div>
+      <div class="text-left blog-text text-gray-500 mt-4">
+        <p>Hi! My name’s [Insert Name], and I founded [Insert] in ____.<br /><br />
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
+          pellentesque.
+          In eget ipsum et felis finibus consequat.<br /><br />
+
+          Fusce non nibh luctus, dignissim risus quis, bibendum dolor. Donec placerat volutpat ligula, ac consectetur
+          felis varius non. Aliquam a nunc rutrum, porttitor dolor eu, pellentesque est. Vivamus id arcu congue,
+          faucibus
+          libero nec, placerat ligula.<br /><br />
+
+          Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu nisl a metus
+          ultrices sodales.<br /><br />
+
+          Fusce non ante velit. Sed auctor odio eu semper molestie. Nam mattis, sapien eget lobortis fringilla, eros
+          ipsum
+          tristique tellus, ac convallis urna massa at nibh.<br /><br />
+
+          Duis non fermentum augue. Vivamus laoreet aliquam risus, sed euismod leo aliquam ut. Vivamus in felis eu
+          lacus
+          feugiat aliquam nec in sapien.<br /><br />
+
+          Cras mattis varius mollis.</p>
       </div>
     </div>
-    <div>
-      <div><img src="assets/banner1.png" alt=""></div>
-      <p>Hi! My name’s [Insert Name], and I founded [Insert] in ____.
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque.
-        In eget ipsum et felis finibus consequat.
+    <div class="p-6 text-center">
+      <h3 class="mx-4 title text-2xl">
+        Comfort made easy
+      </h3>
 
-        Fusce non nibh luctus, dignissim risus quis, bibendum dolor. Donec placerat volutpat ligula, ac consectetur
-        felis varius non. Aliquam a nunc rutrum, porttitor dolor eu, pellentesque est. Vivamus id arcu congue, faucibus
-        libero nec, placerat ligula.
-
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu nisl a metus
-        ultrices sodales.
-
-        Fusce non ante velit. Sed auctor odio eu semper molestie. Nam mattis, sapien eget lobortis fringilla, eros ipsum
-        tristique tellus, ac convallis urna massa at nibh.
-
-        Duis non fermentum augue. Vivamus laoreet aliquam risus, sed euismod leo aliquam ut. Vivamus in felis eu lacus
-        feugiat aliquam nec in sapien.
-
-        Cras mattis varius mollis.</p>
-    </div>
-    <div>
-      <h3>Comfort made easy</h3>
-      <div class="carousel-cards">
-        <div>
-          <img src="assets/ecoStore.png" alt="">
-          <h3>You save.</h3>
-          <p>Browse our store and find something you love.</p>
-        </div>
-        <div>
-          <img src="assets/shippingIcon.png" alt="">
-          <h3>We ship.</h3>
-          <p>We ship your items within 1-2 days of receiving your order.</p>
-        </div>
-        <div>
-          <img src="assets/dayNightIconBig.png" alt="">
-          <h3>You enjoy!.</h3>
-          <p>Wear hernest around the house, out on the town, or in bed.</p>
-        </div>
-      </div>
-      <div class="py-6 bg-white text-center">
-        <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
-          Customize Your Outfit
-          <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
-        </button>
-      </div>
-      <div><img src="assets/stars.png" alt="Stars">
-        <p>One of 500+ 5 Star Reviews Online</p>
-      </div>
-    </div>
-    <div>
-      <h3>What are our fans saying?</h3>
-      <p>Lorem ipsum</p>
-      <div class="gallery"></div>
-      <div class="carousel-dots">
-        <div><img src="assets/userPhoto.png" />
-          <div><img src="assets/stars.png" alt="Stars">
-            <p>One of 500+ 5 Star Reviews Online</p>
+      <div class="swiper swiper-cards mt-6 max-w-md mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide p-12 ">
+            <div class="card p-12 rounded-lg">
+              <img src="assets/eco-store-svgrepo.svg" alt="Store Icon" class="w-12 mx-auto my-6">
+              <h5 class="mx-4 title text-xl">You save.</h5>
+              <p class="text-center mt-4 blog-text text-gray-500">Browse our store and find something you love.</p>
+            </div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales
-            justo.</p>
+          <div class="swiper-slide p-12 ">
+            <div class="middle-card p-12 rounded-lg">
+              <img src="assets/shipping.svg" alt="Shipping Icon" class="w-12 mx-auto my-6">
+              <h5 class="mx-4 title text-xl">We ship.</h5>
+              <p class="text-center mt-4 blog-text text-gray-500">We ship your items within 1-2 days of receiving your
+                order.</p>
+            </div>
+          </div>
+          <div class="swiper-slide p-12 ">
+            <div class="card p-12 rounded-lg">
+              <img src="assets/day-night-sun-moon-cycle.svg" alt="DayNight Icon" class="w-12 mx-auto my-6">
+              <h5 class="mx-4 title text-xl">You enjoy!.</h5>
+              <p class="text-center mt-4 blog-text text-gray-500">Wear hernest around the house, out on the town, or in
+                bed.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next "></div>
+      </div>
+    </div>
+
+    <section class="px-6 mb-4">
+      <div class="text-center">
+        <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
+          Customize Your Outfit
+          <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
+        </button>
+      </div>
+      <div class="flex text-left mt-3 px-4 mx-auto">
+        <img src="assets/stars.png" alt="5-star review rating" class="stars-big ml-4 ">
+        <p class="text-xs text-gray-500 ml-4">
+          One of 500+ 5 Star Reviews Online
+        </p>
+      </div>
+    </section>
+
+    <div class="p-6 text-center">
+      <h3 class="mx-4 title text-2xl">
+        What are our fans saying?
+      </h3>
+
+      <p class="blog-text text-gray-500 my-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis
+        sapien facilisis tincidunt
+        pellentesque. In eget ipsum et felis finibus consequat. Fusce non nibh luctus.</p>
+      <div class="gallery"><img src="assets/gallery.jpg" alt="Users gallery" class="object-cover h-48"></div>
+
+      <div class="swiper swiper-reviews mt-6 max-w-md mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide p-8 ">
+            <section class="p-6 m-6 text-left border border-gray-200 rounded-lg shadow-lg">
+              <div class="max-w-md mx-auto">
+                <div class="mb-4 flex">
+                  <div class="mb-4 h-10 w-10 rounded-full bg-photo"></div>
+                  <div class="mb-4 flex flex-col ml-5 ">
+                    <div class="flex">
+                      <img src="assets/stars.png" alt="5-star review rating" class="mx-auto stars">
+                    </div>
+                    <p class="mt-2 text-sm font-semibold text-gray-700">Jane, S.</p>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non
+                  sodales
+                  justo.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="swiper-slide p-8 ">
+            <section class="p-6 m-6 text-left border border-gray-300 rounded-lg shadow-xl">
+              <div class="max-w-md mx-auto">
+                <div class="mb-4 flex">
+                  <div class="mb-4 h-10 w-10 rounded-full bg-photo"></div>
+                  <div class="mb-4 flex flex-col ml-5 ">
+                    <div class="flex">
+                      <img src="assets/stars.png" alt="5-star review rating" class="mx-auto stars">
+                    </div>
+                    <p class="mt-2 text-sm font-semibold text-gray-700">Jane, S.</p>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non
+                  sodales
+                  justo.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="swiper-slide p-8 ">
+            <section class="p-6 m-6 text-left border border-gray-300 rounded-lg shadow-xl">
+              <div class="max-w-md mx-auto">
+                <div class="mb-4 flex">
+                  <div class="mb-4 h-10 w-10 rounded-full bg-photo"></div>
+                  <div class="mb-4 flex flex-col ml-5 ">
+                    <div class="flex">
+                      <img src="assets/stars.png" alt="5-star review rating" class="mx-auto stars">
+                    </div>
+                    <p class="mt-2 text-sm font-semibold text-gray-700">Jane, S.</p>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non
+                  sodales
+                  justo.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="swiper-pagination mt-12"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next "></div>
+      </div>
+
+    </div>
+
+    <section class="px-6 mb-4">
+      <div class="text-center">
+        <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
+          Customize Your Outfit
+          <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
+        </button>
+      </div>
+      <div class="flex text-left mt-3 px-4 mx-auto">
+        <img src="assets/stars.png" alt="5-star review rating" class="stars-big ml-4 ">
+        <p class="text-xs text-gray-500 ml-4">
+          One of 500+ 5 Star Reviews Online
+        </p>
+      </div>
+    </section>
+
+    <div class="p-6">
+      <h3 class="mx-4 title text-2xl text-center">
+        Frequently asked questions.
+      </h3>
+      <div class="accordion p-4 mx-4">
+
+        <div class="border-b border-gray-200 py-2">
+          <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-gray-800">
+            <span class="text-md title">lorem ipsum dolor sit amet</span>
+            <span id="icon-1" class="text-gray-800 transition-transform duration-300">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.731797 8.548V10.484H8.5198V18.316H10.4558V10.484H18.2878V8.548H10.4558V0.803999H8.5198V8.548H0.731797Z"
+                  fill="#01005B" />
+              </svg>
+            </span>
+          </button>
+          <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-gray-500">
+              Our fabrics and garments are made in Portugal. We build strong relationships with our immediate
+              suppliers
+              and visit as often as possible.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="border-b border-gray-200 py-2">
+          <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-gray-800">
+            <span class="text-md title">lorem ipsum dolor sit amet</span>
+            <span id="icon-2" class="text-gray-800 transition-transform duration-300">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.731797 8.548V10.484H8.5198V18.316H10.4558V10.484H18.2878V8.548H10.4558V0.803999H8.5198V8.548H0.731797Z"
+                  fill="#01005B" />
+              </svg>
+            </span>
+          </button>
+          <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-gray-500">
+              Our fabrics and garments are made in Portugal. We build strong relationships with our immediate
+              suppliers
+              and visit as often as possible.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="border-b border-gray-200 py-2">
+          <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-gray-800">
+            <span class="text-md title">lorem ipsum dolor sit amet</span>
+            <span id="icon-3" class="text-gray-800 transition-transform duration-300">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.731797 8.548V10.484H8.5198V18.316H10.4558V10.484H18.2878V8.548H10.4558V0.803999H8.5198V8.548H0.731797Z"
+                  fill="#01005B" />
+              </svg>
+            </span>
+          </button>
+          <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-gray-500">
+              Our fabrics and garments are made in Portugal. We build strong relationships with our immediate
+              suppliers
+              and visit as often as possible.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="border-b border-gray-200 py-2">
+          <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center py-5 text-gray-800">
+            <span class="text-md title">lorem ipsum dolor sit amet</span>
+            <span id="icon-4" class="text-gray-800 transition-transform duration-300">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.731797 8.548V10.484H8.5198V18.316H10.4558V10.484H18.2878V8.548H10.4558V0.803999H8.5198V8.548H0.731797Z"
+                  fill="#01005B" />
+              </svg>
+            </span>
+          </button>
+          <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-gray-500">
+              Our fabrics and garments are made in Portugal. We build strong relationships with our immediate
+              suppliers
+              and visit as often as possible.
+            </div>
+          </div>
+        </div>
+
+        <div class="border-b border-gray-200 py-2">
+          <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center py-5 text-gray-800">
+            <span class="text-md title">lorem ipsum dolor sit amet</span>
+            <span id="icon-5" class="text-gray-800 transition-transform duration-300">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.731797 8.548V10.484H8.5198V18.316H10.4558V10.484H18.2878V8.548H10.4558V0.803999H8.5198V8.548H0.731797Z"
+                  fill="#01005B" />
+              </svg>
+            </span>
+          </button>
+          <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-gray-500">
+              Our fabrics and garments are made in Portugal. We build strong relationships with our immediate
+              suppliers
+              and visit as often as possible.
+            </div>
+          </div>
+        </div>
+
+        <div class="border-b border-gray-200 py-2">
+          <button onclick="toggleAccordion(6)" class="w-full flex justify-between items-center py-5 text-gray-800">
+            <span class="text-md title">lorem ipsum dolor sit amet</span>
+            <span id="icon-6" class="text-gray-800 transition-transform duration-300">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.731797 8.548V10.484H8.5198V18.316H10.4558V10.484H18.2878V8.548H10.4558V0.803999H8.5198V8.548H0.731797Z"
+                  fill="#01005B" />
+              </svg>
+            </span>
+          </button>
+          <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pb-5 text-sm text-gray-500">
+              Our fabrics and garments are made in Portugal. We build strong relationships with our immediate
+              suppliers
+              and visit as often as possible.
+            </div>
+          </div>
         </div>
       </div>
-      <div class="py-6 bg-white text-center">
+
+    </div>
+
+    <section class="px-6 mb-4">
+      <div class="text-center">
         <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
           Customize Your Outfit
           <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
         </button>
       </div>
-      <div><img src="assets/stars.png" alt="Stars">
-        <p>One of 500+ 5 Star Reviews Online</p>
+      <div class="flex text-left mt-3 px-4 mx-auto">
+        <img src="assets/stars.png" alt="5-star review rating" class="stars-big ml-4 ">
+        <p class="text-xs text-gray-500 ml-4">
+          One of 500+ 5 Star Reviews Online
+        </p>
       </div>
-    </div>
-    <div>
-      <h3>Frequently asked questions.</h3>
-      <div class="accordeon">
-        <ul>
-          <li>
-            <h4>lorem ipsum dolor sit amet</h4>
-            <p>Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers
-              and visit as often as possible. </p>
-          </li>
-          <li>
-            <h4>lorem ipsum dolor sit amet</h4>
-            <p>Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers
-              and visit as often as possible. </p>
-          </li>
-          <li>
-            <h4>lorem ipsum dolor sit amet</h4>
-            <p>Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers
-              and visit as often as possible. </p>
-          </li>
-          <li>
-            <h4>lorem ipsum dolor sit amet</h4>
-            <p>Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers
-              and visit as often as possible. </p>
-          </li>
-          <li>
-            <h4>lorem ipsum dolor sit amet</h4>
-            <p>Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers
-              and visit as often as possible. </p>
-          </li>
-          <li>
-            <h4>lorem ipsum dolor sit amet</h4>
-            <p>Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers
-              and visit as often as possible. </p>
-          </li>
+    </section>
+
+    <section class="impact-section p-6 text-center">
+      <h3 class="mx-4 text-xl text-center my-6">
+        Our Total Green Impact
+      </h3>
+      <div class="mb-4 flex flex-col justify-center sm:flex-row">
+        <div class="mx-10 mt-4 p-4 border-b border-gray-300">
+          <img src="assets/co2Icon.png" alt="CO2" class="mx-auto">
+          <h4 class="text-md font-semibold my-2">3,927 kg</h4>
+          <p class="text-sm">of CO2 saved</p>
+        </div>
+        <div class="mx-10 mt-4 p-4 border-b border-gray-300">
+          <img src="assets/h2oIcon.png" alt="H2O" class="mx-auto">
+          <h4 class="text-md font-semibold my-2">2,546,167 days</h4>
+          <p class="text-sm">of drinking water saved</p>
+        </div>
+        <div class="mx-10 mt-4 p-4 border-b border-gray-300 hidden sm:block">
+          <img src="assets/energyIcon.png" alt="Energy" class="mx-auto">
+          <h4 class="text-md font-semibold my-2">7,321 kWh</h4>
+          <p class="text-sm">of energy saved</p>
+        </div>
       </div>
-      <div class="py-6 bg-white text-center">
-        <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
-          Customize Your Outfit
-          <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
-        </button>
-      </div>
-      <div><img src="assets/stars.png" alt="Stars">
-        <p>One of 500+ 5 Star Reviews Online</p>
-      </div>
-    </div>
-    <div>
-      <h3>Our Total Green Impact</h3>
-      <div>
-        <img src="assets/co2Icon.png" alt="">
-        <h4>3,927 kg</h4>
-        <p>of CO2 saved</p>
-      </div>
-      <div>
-        <img src="assets/h2oIcon.png" alt="">
-        <h4>2,546,167 days</h4>
-        <p>of drinking water saved</p>
-      </div>
-      <div>
-        <img src="assets/energyIcon.png" alt="">
-        <h4>7,321 kWh</h4>
-        <p>of energy saved</p>
-      </div>
-    </div>
-    <div>
-      <h3>Find something you love.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
-        pellentesque. In eget ipsum et felis finibus consequat.</p>
-      <p>Click below to browse our collection!</p>
-      <img src="assets/banner.png" alt="">
-      <div class="py-6 bg-white text-center">
-        <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
-          Customize Your Outfit
-          <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
-        </button>
-      </div>
-      <div><img src="assets/stars.png" alt="Stars">
-        <p>One of 500+ 5 Star Reviews Online</p>
-      </div>
-    </div>
-    <footer>
-      <div class="py-6 bg-white text-center">
+    </section>
+
+
+    <footer class="footer-mobile mt-6 py-6 text-center">
+      <h3 class="mx-4 title text-2xl">
+        Find something you love.
+      </h3>
+      <p class="text-xs text-gray-600 my-6">Click below to browse our collection!</p>
+      <img src="assets/footerBanner.png" alt="footer banner image">
+      <section class="px-6 my-12">
+        <div class="text-center">
+          <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
+            Customize Your Outfit
+            <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
+          </button>
+        </div>
+        <div class="flex text-left mt-3 px-4 mx-auto">
+          <img src="assets/stars.png" alt="5-star review rating" class="stars-big ml-4 ">
+          <p class="text-xs text-gray-500 ml-4">
+            One of 500+ 5 Star Reviews Online
+          </p>
+        </div>
+      </section>
+
+    </footer>
+
+    <footer class="hidden sm:block">
+      <div class="py-6 text-center">
         <button class="button px-6 py-4 text-white rounded-md inline-flex items-center justify-center gap-4">
           Customize Your Outfit
           <img src="assets/Vector.png" alt="Arrow Icon" class="w-6">
