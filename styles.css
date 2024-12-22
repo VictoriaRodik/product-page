@@ -117,7 +117,7 @@
     color: var(--title-color)
 }
 
-.footer-mobile {
+.footer{
     background: linear-gradient(360deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
 
 }
