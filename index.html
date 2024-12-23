@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script defer src="swiper-init.js"></script>
   <script src="toggleAccordion.js"></script>
+  <script src="main.js"></script>
 </head>
 
 <body>
@@ -218,7 +219,7 @@
     </h3>
     <div class="my-6  lg:col-start-1 lg:row-span-2"><img src="assets/banner1.png" alt="Products" class="max-w-md"></div>
     <div class="text-left blog-text text-gray-500 mt-4  lg:col-start-2 lg:row-start-2">
-      <p>Hi! My name’s [Insert Name], and I founded [Insert] in ____.<br /><br />
+      <p>Hi! My name’s <span id="blogName"></span>, and I founded <span id="companyName"></span> in <span id="year"></span><br /><br />
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt
         pellentesque.
@@ -618,6 +619,7 @@
   </footer>
   </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 </body>
 
 </html>
