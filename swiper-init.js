@@ -9,15 +9,17 @@ const defaultPagination = {
 };
 
 const swiperLogos = new Swiper('.swiper-logos', {
-  slidesPerView: 3,
-  spaceBetween: 10,
-  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 15,
   pagination: defaultPagination,
   breakpoints: {
     768: { 
-      slidesPerView: 5,
+      slidesPerView: 3,
       spaceBetween: 20,
-      pagination: false,
+    },
+    1024: { 
+      slidesPerView: 5,
+      spaceBetween: 30,
     },
   },
 });
@@ -60,13 +62,12 @@ const swiperProducts = new Swiper('.swiper-products', {
   },
 });
 
-const swiperCards = new Swiper('.swiper-cards', {
+const swiperCards = new Swiper('.swiper-comfort', {
   slidesPerView: 1,
   navigation: defaultNavigation,
   breakpoints: {
     1024: { 
       slidesPerView: 3,
-      navigation: false,
     },
   },
 });

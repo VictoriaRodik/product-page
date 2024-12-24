@@ -1,15 +1,20 @@
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('assets/fonts/Sofia\ Pro\ Regular\ Az.otf') format('opentype');
+}
+
+
 :root {
     --background-color: #F9F0E5;
     --primary-color: #01005B;
     --background-color-add: #F0EEEF;
     --title-color: #2A2996;
 
-
 }
 
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Sofia Pro', sans-serif;
 }
 
 .bg-custom {
@@ -26,7 +31,12 @@
 
 .title {
     color: var(--primary-color);
-    letter-spacing: 0.1rem;
+    font-size: 26px;
+}
+
+.subtitle {
+    color: var(--primary-color);
+    font-size: 20px;
 }
 
 
@@ -117,7 +127,7 @@
     color: var(--title-color)
 }
 
-.footer{
+.footer {
     background: linear-gradient(360deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
 
 }
@@ -130,4 +140,14 @@
 .color-section {
     background: linear-gradient(180deg, #F9F0E5 -7.8%, rgba(249, 240, 229, 0.18) 38.6%, rgba(249, 240, 229, 0) 100%);
 
+}
+
+
+@media (min-width:769px) {
+    .title {
+        font-size: 32px;
+    }
+    .subtitle {
+        font-size: 22px;
+    }
 }
